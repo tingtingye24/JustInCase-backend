@@ -13,9 +13,9 @@ class QuestionsController < ApplicationController
         percent = question.percent_correct
         if params[:user_answer] == 'correct'
             correct++
-            total++
             percent = correct/total
         end
+        total++
 
         question.update(total_correct: correct, total_tested: total, percent_correct: percent)
         render json: question
