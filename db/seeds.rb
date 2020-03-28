@@ -21,7 +21,10 @@ Question.create(question: "Are antibiotics effective in preventing and treating 
 Question.create(question: "Are there any specific medicines to prevent or treat the new coronavirus?", answer: false, reason: "To date, there is no specific medicine recommended to prevent or treat the new coronavirus (2019-nCoV). However, those infected with the virus should receive appropriate care to relieve and treat symptoms, and those with severe illness should receive optimized supportive care. Some specific treatments are under investigation, and will be tested through clinical trials. WHO is helping to accelerate research and development efforts with a range or partners.")
 
 
-
+12.times{ |i| 
+    question = Question.find(i+1)
+    question.update(source: "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters")
+    }
 
 
 

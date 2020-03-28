@@ -4,6 +4,8 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
       t.string :question
       t.boolean :answer
       t.string :reason
+      t.float :percent_correct, :default => 0
+      t.string :source
       t.timestamps
     end
   end

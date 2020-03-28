@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2020_03_28_172819) do
     t.string "question"
     t.boolean "answer"
     t.string "reason"
+    t.float "percent_correct", default: 0.0
+    t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
